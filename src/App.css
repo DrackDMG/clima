@@ -5,20 +5,23 @@
 }
 
 .panel {
-  background-color: rgb(24, 25, 48);
   height: auto;
   width: 35rem;
   min-width: 18.2rem;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   align-content: space-around;
   align-items: center;
   padding: 25px;
 }
 
+.bd {
+  backdrop-filter: blur(20px);
+}
+
 .panelIz {
-  background-color: rgb(14, 14, 28);
+  background-color: rgb(6, 6, 24);
   height: auto;
   width: auto;
   min-width: 25rem;

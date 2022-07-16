@@ -4,10 +4,13 @@ export function DatosPanelP() {
     return (
         <div className={styles.datos}>
             <img src={nube} alt="knasij" />
-            <div><h1 className={styles.grados}>15^C</h1></div>
-            <h3>snower</h3>
-            <h4>today</h4>
-            <h4>location</h4>
+            <div className={styles.gradosD}>
+                <h1 className={styles.grados}>15</h1>
+                <h1 className={styles.gradosC}>°C</h1>
+            </div>
+            <h3 className={styles.estado}>shower</h3>
+            <h4 className={styles.h4}>Today Viernes 5 de junio</h4>
+            <h4 className={styles.h4}>Mexico</h4>
         </div>
     )
 }

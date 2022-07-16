@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    margin: 5px 0;
 }
 
 .Card {
@@ -12,4 +13,11 @@
     margin: 15px;
     backdrop-filter: blur(10px);
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .Card {
+        width: 90px;
+        margin: 10px;
+    }
 }
