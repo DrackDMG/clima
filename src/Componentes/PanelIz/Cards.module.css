@@ -1,0 +1,15 @@
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.Card {
+    width: 100px;
+    height: 130px;
+    background-color: rgb(27, 28, 44);
+    margin: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}

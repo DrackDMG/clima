@@ -1,0 +1,16 @@
+.datos {
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+
+.grados {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 45px 0;
+    font-family: 'lora';
+}

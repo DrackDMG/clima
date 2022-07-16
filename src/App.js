@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import nube from './assets/descarga.jpg';
+import { Buscador } from './Componentes/Buscador/Buscador';
+import { Footer } from './Componentes/Footer/Footer';
+import { DatosPanelP } from './Componentes/Panel/DatosPanelP';
+import { Cards } from './Componentes/PanelIz/Cards';
+import { CardsD } from './Componentes/PanelIz/CardsD';
 
 function App() {
-  return (
+  return (<>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='panel'>
+        <Buscador />
+        <DatosPanelP />
+      </div>
+      <div className='panelIz'>
+        <Cards />
+        <CardsD />
+      </div>
     </div>
+  </>
   );
 }
 
