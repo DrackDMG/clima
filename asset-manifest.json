@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/pelis/static/css/main.62c15266.css",
+    "main.js": "/pelis/static/js/main.0ddb5170.js",
+    "static/media/descarga.png": "/pelis/static/media/descarga.f87a1419884040ba2a39.png",
+    "index.html": "/pelis/index.html",
+    "main.62c15266.css.map": "/pelis/static/css/main.62c15266.css.map",
+    "main.0ddb5170.js.map": "/pelis/static/js/main.0ddb5170.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62c15266.css",
+    "static/js/main.0ddb5170.js"
+  ]
+}
