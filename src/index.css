@@ -8,7 +8,7 @@ body {
   color: #fafafa;
   background-color: rgb(24, 25, 48);
   background-image: url(./assets/left.jpg);
-  background-size: cover;
+  background-size: auto;
   height: 100%;
   display: flex;
   flex-direction: column;
