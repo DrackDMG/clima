@@ -7,11 +7,10 @@ import { useEffect, useState } from 'react';
 import { Cargando } from '../Cargando/Cargando';
 export function Buscador() {
     const [buscador, setBuscador] = useState('');
-    const [bot, setBot] = useState(false);
+    const [searchUrl, setSearchUrl] = useState("https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&q=Mexico&days=7");
 
     const [clima, setClima] = useState([]);
     const [isLoad, setIsLoad] = useState(true);
-
 
     useEffect(() => {
         setIsLoad(true)
@@ -22,20 +21,19 @@ export function Buscador() {
                 'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             }
         };
-        const searchUrl = buscador ? "https://weatherapi-com.p.rapidapi.com/current.json?lang=es&q=" + buscador : "https://weatherapi-com.p.rapidapi.com/current.json?lang=es&q=Mexico"
+
         fetch(searchUrl, options)
             .then(response => response.json())
             .then(data => {
                 setClima(data)
-                console.log(data);
                 setIsLoad(false);
             }
             )
             .catch(err => console.error(err));
-    }, [bot]);
+    }, [searchUrl]);
     const handleSumnit = (e) => {
         e.preventDefault();
-        setBot(!bot)
+        setSearchUrl(buscador ? "https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&days=7&q=" + buscador : "https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&q=Mexico&days=7")
     }
 
     if (isLoad) {
@@ -53,8 +51,6 @@ export function Buscador() {
                     <h1 className={styles.noRes}>sin resultados</h1>
                 </form>
             </div>
-            <div className='panelIz'>
-            </div>
         </>
     }
 
@@ -67,11 +63,14 @@ export function Buscador() {
                     <button type='submit' className={styles.Boton}><BiSearchAlt size={15} /></button>
                 </div>
             </form>
-            {console.log(clima)}
             <DatosPanelP lugar={clima} />
         </div>
         <div className='panelIz'>
-            <Cards lugar={clima} />
+            <div className={styles.Cards}>
+                {clima.forecast.forecastday.map((clim) => (
+                    <Cards key={clim.date_epoch} lugar={clim} />
+                ))}
+            </div>
             <CardsD lugar={clima} />
         </div>
 

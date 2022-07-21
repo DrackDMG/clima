@@ -1,13 +1,5 @@
-.Cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin: 5px 0;
-}
-
 .Card {
-    width: 100px;
+    width: 130px;
     height: 130px;
     background-color: rgba(34, 36, 53, 0.5);
     margin: 15px;
@@ -16,9 +8,14 @@
     border-radius: 10px;
 }
 
+.Temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 @media (max-width: 868px) {
     .Card {
-        width: 90px;
         margin: 10px;
     }
 }

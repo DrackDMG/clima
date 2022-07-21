@@ -29,6 +29,14 @@
     text-align: center;
 }
 
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
 @media(max-width: 868px) {
     .Buscador {
         width: 20em;

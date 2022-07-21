@@ -1,33 +1,13 @@
 import styles from './Cards.module.css';
-import nube from '../../assets/descarga.png';
-export function Cards() {
+export function Cards({ lugar }) {
     return (
-        <div className={styles.Cards}>
-            <div className={styles.Card} >
-                <p>Dia 5 jul</p>
-                <img src={nube} height={30} alt="knasij" />
-                <p>45°C</p>
-            </div>
-            <div className={styles.Card} >
-                <p>Dia 6 jul</p>
-                <img src={nube} height={30} alt="knasij" />
-                <p>45°C</p>
-            </div>
-            <div className={styles.Card} >
-                <p>Dia 7 jul</p>
-                <img src={nube} height={30} alt="knasij" />
-                <p>45°C</p>
-            </div>
-            <div className={styles.Card} >
-                <p>Dia 8 jul</p>
-                <img src={nube} height={30} alt="knasij" />
-                <p>45°C</p>
-            </div>
-            <div className={styles.Card} >
-                <p>Dia 8 jul</p>
-                <img src={nube} height={30} alt="knasij" />
-                <p>45°C</p>
-            </div>
+
+        <div className={styles.Card} >
+            <p>Día {lugar.date}</p>
+            <img src={lugar.day.condition.icon} height={30} alt="knasij" />
+            <div className={styles.Temp}><p>{lugar.day.mintemp_c}°C </p>
+                -
+                <p> {lugar.day.maxtemp_c}°C</p></div>
         </div>
     )
 }
