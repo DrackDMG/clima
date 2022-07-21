@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Tiempo/static/css/main.1ba40194.css",
-    "main.js": "/Tiempo/static/js/main.ca141cf7.js",
+    "main.js": "/Tiempo/static/js/main.d1f13e81.js",
     "static/media/left.jpg": "/Tiempo/static/media/left.ebf2a1f50b0b34821eb1.jpg",
     "index.html": "/Tiempo/index.html",
     "main.1ba40194.css.map": "/Tiempo/static/css/main.1ba40194.css.map",
-    "main.ca141cf7.js.map": "/Tiempo/static/js/main.ca141cf7.js.map"
+    "main.d1f13e81.js.map": "/Tiempo/static/js/main.d1f13e81.js.map"
   },
   "entrypoints": [
     "static/css/main.1ba40194.css",
-    "static/js/main.ca141cf7.js"
+    "static/js/main.d1f13e81.js"
   ]
 }
