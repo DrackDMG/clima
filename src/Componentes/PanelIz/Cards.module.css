@@ -1,6 +1,10 @@
 .Card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     width: 130px;
-    height: 130px;
+    height: 160px;
     background-color: rgba(34, 36, 53, 0.5);
     margin: 15px;
     backdrop-filter: blur(5px);

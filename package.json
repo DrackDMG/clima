@@ -2,7 +2,7 @@
   "name": "tiempo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://DrackDMG.github.io/Tiempo",
+  "homepage": "https://drackdmg.github.io/clima",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",

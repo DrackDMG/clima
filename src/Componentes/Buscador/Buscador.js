@@ -6,8 +6,10 @@ import { CardsD } from '../PanelIz/CardsD';
 import { useEffect, useState } from 'react';
 import { Cargando } from '../Cargando/Cargando';
 export function Buscador() {
+    console.log(process.env);
+    const url = "https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&q=auto:ip&days=7";
     const [buscador, setBuscador] = useState('');
-    const [searchUrl, setSearchUrl] = useState("https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&q=Mexico&days=7");
+    const [searchUrl, setSearchUrl] = useState(url);
 
     const [clima, setClima] = useState([]);
     const [isLoad, setIsLoad] = useState(true);
@@ -17,7 +19,7 @@ export function Buscador() {
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'edc44c572fmsh792cd706a56db84p125ab8jsnd197b3e5ab19',
+                'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
                 'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             }
         };
@@ -33,7 +35,7 @@ export function Buscador() {
     }, [searchUrl]);
     const handleSumnit = (e) => {
         e.preventDefault();
-        setSearchUrl(buscador ? "https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&days=7&q=" + buscador : "https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&q=Mexico&days=7")
+        setSearchUrl(buscador ? "https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&days=7&q=" + buscador : url)
     }
 
     if (isLoad) {
