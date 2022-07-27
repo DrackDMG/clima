@@ -6,7 +6,6 @@ import { CardsD } from '../PanelIz/CardsD';
 import { useEffect, useState } from 'react';
 import { Cargando } from '../Cargando/Cargando';
 export function Buscador() {
-    console.log(process.env);
     const url = "https://weatherapi-com.p.rapidapi.com/forecast.json?lang=es&q=auto:ip&days=7";
     const [buscador, setBuscador] = useState('');
     const [searchUrl, setSearchUrl] = useState(url);
@@ -42,7 +41,7 @@ export function Buscador() {
         return <Cargando />
     }
     if (!isLoad && clima.error) {
-        return <>
+        return (<>
             <div className='panel'>
                 <form className={styles.contenedor} onSubmit={handleSumnit}>
                     <div className={styles.Flex}>
@@ -54,6 +53,7 @@ export function Buscador() {
                 </form>
             </div>
         </>
+        );
     }
 
     return (<>
